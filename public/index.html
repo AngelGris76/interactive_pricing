@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Interactive Pricing Component</title>
+  </head>
+  <body> 
+    <header class="header"> 
+      <h1 class="header__title">Simple, traffic-based pricing</h1>
+      <p class="header__subtitle">Sign-up for our 30-day trial. No credit card required.</p>
+    </header>
+    <form class="card"> 
+      <div class="card__body">
+        <p class="card__pages"> <span class="card__pages-text">Pagesviews</span></p>
+        <input class="card__range" type="range" max="5" aria-label="Select plan">
+        <p class="card__prices">$ <span class="card__prices-text">/month</span></p>
+        <div class="card__pricing">
+          <label class="card__pricing-monthly" for="pricingcontrol">Monthly Billing</label>
+          <input class="card__pricingcontrol" id="pricingcontrol" type="checkbox">
+          <label class="card__pricing-yearly" for="pricingcontrol">Yearly Billing</label>
+        </div>
+      </div>
+      <div class="card__footer">
+        <ul class="functions">
+          <li class="functions__item">Unilimited web sites</li>
+          <li class="functions__item">100% data ownership</li>
+          <li class="functions__item">Email reports</li>
+        </ul>
+        <button type="submit">Start my trial</button>
+      </div>
+    </form>
+  </body>
+</html>
