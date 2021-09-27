@@ -32,7 +32,7 @@ const watching = () => {
   generateServer();
   watch("./src/views/**/*.pug", series(pugTask));
   watch("./src/sass/**/*.scss", series(sassTask));
-  watch(["./public/*.html", "/public/js/*js"], series(reloadBrowser));
+  watch(["./public/*.html", "./public/js/*js"], series(reloadBrowser));
 };
 
 export { watching, pugTask as pug, sassTask as sass };
