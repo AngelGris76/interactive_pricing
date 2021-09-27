@@ -1,0 +1,35 @@
+@use "../mixins/rangethumb";
+
+.card__range {
+  position: relative;
+
+  display: block;
+  width: 90%;
+  height: 8px;
+  margin: 32px auto;
+
+  appearance: none;
+  background-image: linear-gradient(
+    to right,
+    var(--Soft-Cyan) var(--Bar-percentage),
+    transparent var(--Bar-percentage) 100%
+  );
+  background-color: var(--Light-Grayish-Blue);
+  border-radius: 4px;
+
+  &::-webkit-slider-thumb {
+    @include rangethumb.rangethumb;
+  }
+
+  &::-ms-thumb {
+    @include rangethumb.rangethumb;
+  }
+
+  &::-moz-range-thumb {
+    @include rangethumb.rangethumb;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

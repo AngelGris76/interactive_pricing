@@ -1,0 +1,152 @@
+.header,
+.card {
+  width: 90%;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.6em;
+  min-height: 200px;
+
+  font-size: clamp(1.28rem, 4vw, 1.81rem);
+
+  background-image: url("../assets/images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__title,
+  &__subtitle {
+    margin: 0;
+
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 0.4em;
+
+    font-size: inherit;
+  }
+
+  &__subtitle {
+    width: 60%;
+    min-width: 190px;
+
+    font-size: clamp(0.96rem, 3vw, 1.06rem);
+    line-height: 1.7;
+
+    color: var(--Grayish-Blue);
+  }
+}
+
+.card {
+  padding-top: 1.7rem;
+  padding-bottom: 1.7rem;
+
+  background-color: white;
+  border-radius: 5px;
+  color: var(--Grayish-Blue);
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__pages {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: 800;
+    letter-spacing: 0.2em;
+
+    &-text {
+      text-transform: uppercase;
+    }
+  }
+
+  &__prices {
+    margin-top: 0.36em;
+
+    font-size: clamp(2.2rem, 8vw, 2.5rem);
+    font-weight: 800;
+
+    color: var(--Dark-Desaturated-Blue);
+    @media screen and (min-width: 700px) {
+      order: 2;
+    }
+
+    &-text {
+      display: inline-block;
+      margin-bottom: 0.5em;
+
+      vertical-align: middle;
+      font-size: 0.45em;
+      font-weight: 600;
+
+      color: var(--Grayish-Blue);
+    }
+  }
+
+  &__range {
+    @media screen and (min-width: 700px) {
+      order: 3;
+    }
+  }
+
+  &__pricing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1ch;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.3rem;
+
+    font-size: 0.8rem;
+
+    &-yearly {
+      position: relative;
+
+      margin-right: 2ch;
+
+      &-discount {
+        position: absolute;
+        right: -4em;
+        top: -0.3em;
+
+        padding: 0.3em 0.6em;
+
+        font-size: 0.9em;
+
+        border-radius: 1em;
+        background-color: var(--Light-Grayish-Red);
+        color: var(--Light-Red);
+
+        &--text {
+          display: none;
+        }
+      }
+    }
+
+    @media screen and (min-width: 700px) {
+      order: 4;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    padding-top: 0.8rem;
+
+    border-top: 1px solid var(--Light-Grayish-Blue);
+  }
+}

@@ -1,0 +1,33 @@
+.card__pricingcontrol {
+  position: relative;
+
+  flex-shrink: 0;
+  width: 42px;
+  height: 22px;
+  margin: 0;
+
+  appearance: none;
+  background-color: var(--Light-Grayish-Blue-2);
+  border-radius: 11px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  &:checked::after {
+    transform: translateX(20px);
+  }
+
+  /* &:hover {
+    cursor: pointer;
+    background-color: var(--Strong-Cyan);
+  } */
+}

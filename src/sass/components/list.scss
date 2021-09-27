@@ -1,0 +1,12 @@
+.functions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.9rem;
+  padding-left: 0;
+
+  font-size: 0.8rem;
+
+  list-style: url("../assets/images/icon-check.svg");
+}
