@@ -1,3 +1,5 @@
+$break-point: 768px;
+
 .card__pricingcontrol {
   position: relative;
 
@@ -26,8 +28,10 @@
     transform: translateX(20px);
   }
 
-  /* &:hover {
-    cursor: pointer;
-    background-color: var(--Strong-Cyan);
-  } */
+  @media screen and (min-width: $break-point) {
+    &:hover {
+      cursor: pointer;
+      background-color: var(--Strong-Cyan);
+    }
+  }
 }

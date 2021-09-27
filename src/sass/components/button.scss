@@ -1,3 +1,5 @@
+$break-point: 768px;
+
 .card__button {
   min-width: 170px;
   padding: 1em;
@@ -10,4 +12,9 @@
   color: var(--Pale-Blue);
   border: none;
   outline: none;
+  @media screen and (min-width: $break-point) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

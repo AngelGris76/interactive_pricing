@@ -1,7 +1,7 @@
+$break-point: 768px;
 .header,
 .card {
   width: 90%;
-  max-width: 768px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -11,8 +11,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 768px;
   margin-top: 1.6em;
   min-height: 200px;
+  margin-bottom: 1.5vw;
 
   font-size: clamp(1.28rem, 4vw, 1.81rem);
 
@@ -45,18 +47,27 @@
 }
 
 .card {
+  max-width: 540px;
   padding-top: 1.7rem;
   padding-bottom: 1.7rem;
 
   background-color: white;
   border-radius: 5px;
   color: var(--Grayish-Blue);
+  box-shadow: 0 5px 15px var(--Light-Grayish-Blue-2);
 
   &__body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: $break-point) {
+      justify-content: space-between;
+    }
   }
 
   &__pages {
@@ -76,7 +87,9 @@
     font-weight: 800;
 
     color: var(--Dark-Desaturated-Blue);
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: $break-point) {
+      margin-top: 0.5em;
+      margin-bottom: 0.4em;
       order: 2;
     }
 
@@ -93,7 +106,7 @@
   }
 
   &__range {
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: $break-point) {
       order: 3;
     }
   }
@@ -128,14 +141,22 @@
         background-color: var(--Light-Grayish-Red);
         color: var(--Light-Red);
 
+        @media screen and (min-width: $break-point) {
+          right: -8.5em;
+        }
+
         &--text {
           display: none;
+          @media screen and (min-width: $break-point) {
+            display: inline;
+          }
         }
       }
     }
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: $break-point) {
       order: 4;
+      margin-top: 2.6em;
     }
   }
 
@@ -145,8 +166,16 @@
     justify-content: center;
     align-items: center;
     gap: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 0.8rem;
 
     border-top: 1px solid var(--Light-Grayish-Blue);
+
+    @media screen and (min-width: $break-point) {
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 11.2rem;
+    }
   }
 }
