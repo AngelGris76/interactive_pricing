@@ -18,7 +18,7 @@ const refreshPages = (index) => {
   pages.firstChild.textContent = plans[index]["pages"];
 };
 
-rangeControl.addEventListener("change", () => {
+rangeControl.addEventListener("input", () => {
   let percentage = rangeControl.value * 25;
 
   document.documentElement.style.setProperty(
