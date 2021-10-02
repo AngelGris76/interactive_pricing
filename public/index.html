@@ -16,28 +16,30 @@
       <h1 class="header__title">Simple, traffic-based pricing</h1>
       <p class="header__subtitle">Sign-up for our 30-day trial. No credit card required.</p>
     </header>
-    <form class="card"> 
-      <div class="card__body">
-        <div class="card__output" id="cardoutput" role="status" aria-live="polite" aria-atomic="true" aria-relevant="all">
-          <div class="card__pages" id="cardpages">100K <span class="card__pages-text">Pagesviews</span></div>
-          <div class="card__prices" id="cardprices">$16 <span class="card__prices-text">/ month</span></div>
+    <main>
+      <form class="card"> 
+        <div class="card__body">
+          <div class="card__output" id="cardoutput" role="status" aria-live="polite" aria-atomic="true" aria-relevant="all">
+            <div class="card__pages" id="cardpages">100K <span class="card__pages-text">Pagesviews</span></div>
+            <div class="card__prices" id="cardprices">$16.00 <span class="card__prices-text">/ month</span></div>
+          </div>
+          <input class="card__range" id="cardrange" max="4" aria-label="Select plan" aria-controls="cardoutput" type="range">
+          <div class="card__pricing">
+            <label class="card__pricing-monthly">Monthly Billing</label>
+            <input class="card__pricingcontrol" id="pricingcontrol" type="checkbox" aria-label="Yearly billing, 25% discount">
+            <label class="card__pricing-yearly" for="pricingcontrol">Yearly Billing<span class="card__pricing-yearly-discount">-25% <span class="card__pricing-yearly-discount--text">discount</span></span></label>
+          </div>
         </div>
-        <input class="card__range" id="cardrange" max="4" aria-label="Select plan" aria-controls="cardoutput" type="range">
-        <div class="card__pricing">
-          <label class="card__pricing-monthly">Monthly Billing</label>
-          <input class="card__pricingcontrol" id="pricingcontrol" type="checkbox" aria-label="Yearly billing, 25% discount">
-          <label class="card__pricing-yearly" for="pricingcontrol">Yearly Billing<span class="card__pricing-yearly-discount">-25% <span class="card__pricing-yearly-discount--text">discount</span></span></label>
+        <div class="card__footer">
+          <ul class="functions">
+            <li class="functions__item">Unilimited web sites</li>
+            <li class="functions__item">100% data ownership</li>
+            <li class="functions__item">Email reports</li>
+          </ul>
+          <button class="card__button" type="submit">Start my trial</button>
         </div>
-      </div>
-      <div class="card__footer">
-        <ul class="functions">
-          <li class="functions__item">Unilimited web sites</li>
-          <li class="functions__item">100% data ownership</li>
-          <li class="functions__item">Email reports</li>
-        </ul>
-        <button class="card__button" type="submit">Start my trial</button>
-      </div>
-    </form>
+      </form>
+    </main>
     <script src="js/script.js"> </script>
   </body>
 </html>

@@ -1,9 +1,9 @@
 const plans = [
-  { pages: "10K ", price: "$8 " },
-  { pages: "50K ", price: "$12 " },
-  { pages: "100K ", price: "$16 " },
-  { pages: "500K ", price: "$24 " },
-  { pages: "1M ", price: "$36 " },
+  { pages: "10K ", price: "$8.00 " },
+  { pages: "50K ", price: "$12.00 " },
+  { pages: "100K ", price: "$16.00 " },
+  { pages: "500K ", price: "$24.00 " },
+  { pages: "1M ", price: "$36.00 " },
 ];
 
 const pages = document.querySelector(".card__pages");
