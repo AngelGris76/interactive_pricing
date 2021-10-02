@@ -18,12 +18,14 @@
     </header>
     <form class="card"> 
       <div class="card__body">
-        <p class="card__pages">100K <span class="card__pages-text">Pagesviews</span></p>
-        <input class="card__range" type="range" max="4" aria-label="Select plan">
-        <p class="card__prices">$16 <span class="card__prices-text">/ month</span></p>
+        <div class="card__output" id="cardoutput" role="status" aria-live="polite" aria-atomic="true" aria-relevant="all">
+          <div class="card__pages" id="cardpages">100K <span class="card__pages-text">Pagesviews</span></div>
+          <div class="card__prices" id="cardprices">$16 <span class="card__prices-text">/ month</span></div>
+        </div>
+        <input class="card__range" id="cardrange" max="4" aria-label="Select plan" aria-controls="cardoutput" type="range">
         <div class="card__pricing">
-          <label class="card__pricing-monthly" for="pricingcontrol">Monthly Billing</label>
-          <input class="card__pricingcontrol" id="pricingcontrol" type="checkbox">
+          <label class="card__pricing-monthly">Monthly Billing</label>
+          <input class="card__pricingcontrol" id="pricingcontrol" type="checkbox" aria-label="Yearly billing, 25% discount">
           <label class="card__pricing-yearly" for="pricingcontrol">Yearly Billing<span class="card__pricing-yearly-discount">-25% <span class="card__pricing-yearly-discount--text">discount</span></span></label>
         </div>
       </div>

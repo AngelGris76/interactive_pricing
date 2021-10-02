@@ -11,11 +11,11 @@ const prices = document.querySelector(".card__prices");
 const rangeControl = document.querySelector(".card__range");
 
 const refreshPrices = (index) => {
-  prices.firstChild.textContent = plans[index]["price"];
+  prices.firstChild.textContent = plans[parseInt(index)]["price"];
 };
 
 const refreshPages = (index) => {
-  pages.firstChild.textContent = plans[index]["pages"];
+  pages.firstChild.textContent = plans[parseInt(index)]["pages"];
 };
 
 rangeControl.addEventListener("input", () => {

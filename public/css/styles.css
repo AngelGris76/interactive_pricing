@@ -76,25 +76,39 @@ body {
 
 .card {
   max-width: 540px;
-  padding-top: 1.7rem;
-  padding-bottom: 1.7rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: white;
   border-radius: 5px;
   color: var(--Grayish-Blue);
   box-shadow: 0 5px 15px var(--Light-Grayish-Blue-2);
 }
+@media screen and (min-width: 768px) {
+  .card {
+    padding-top: 2.75rem;
+    padding-bottom: 1.5rem;
+  }
+}
 .card__body {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  position: relative;
   align-items: center;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
+.card__output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 148px;
+  margin-bottom: 2.5rem;
+}
 @media screen and (min-width: 768px) {
-  .card__body {
-    justify-content: space-between;
+  .card__output {
+    flex-direction: row;
+    height: 48px;
+    margin-bottom: 7.2rem;
   }
 }
 .card__pages {
@@ -126,21 +140,16 @@ body {
   font-weight: 600;
   color: var(--Grayish-Blue);
 }
-@media screen and (min-width: 768px) {
-  .card__range {
-    order: 3;
-  }
-}
 .card__pricing {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1ch;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2.3rem;
+  margin-bottom: 2.7rem;
   font-size: 0.8rem;
+  text-align: center;
+}
+.card__pricing-monthly, .card__pricing-yearly {
+  vertical-align: middle;
 }
 .card__pricing-yearly {
   position: relative;
@@ -148,8 +157,8 @@ body {
 }
 .card__pricing-yearly-discount {
   position: absolute;
+  top: 0;
   right: -4em;
-  top: -0.3em;
   padding: 0.3em 0.6em;
   font-size: 0.9em;
   border-radius: 1em;
@@ -169,12 +178,6 @@ body {
     display: inline;
   }
 }
-@media screen and (min-width: 768px) {
-  .card__pricing {
-    order: 4;
-    margin-top: 2.6em;
-  }
-}
 .card__footer {
   display: flex;
   flex-direction: column;
@@ -191,19 +194,25 @@ body {
     flex-direction: row;
     justify-content: space-around;
     gap: 11.2rem;
+    padding-top: 1.5rem;
   }
 }
 
 .card__range {
-  position: relative;
+  position: absolute;
+  top: 60px;
   display: block;
   width: 100%;
   height: 8px;
-  margin: 32px auto;
   appearance: none;
   background-image: linear-gradient(to right, var(--Soft-Cyan) var(--Bar-percentage), transparent var(--Bar-percentage) 100%);
   background-color: var(--Light-Grayish-Blue);
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .card__range {
+    transform: translateY(34px);
+  }
 }
 .card__range::-webkit-slider-thumb {
   width: 40px;
@@ -256,7 +265,8 @@ body {
   flex-shrink: 0;
   width: 42px;
   height: 22px;
-  margin: 0;
+  margin: 0 1ch;
+  vertical-align: middle;
   appearance: none;
   background-color: var(--Light-Grayish-Blue-2);
   border-radius: 11px;

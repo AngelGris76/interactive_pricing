@@ -6,7 +6,9 @@ $break-point: 768px;
   flex-shrink: 0;
   width: 42px;
   height: 22px;
-  margin: 0;
+  margin: 0 1ch;
+
+  vertical-align: middle;
 
   appearance: none;
   background-color: var(--Light-Grayish-Blue-2);
